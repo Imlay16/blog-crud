@@ -73,7 +73,7 @@ public class BlogService {
             jsonMapList = objectMapper.readValue(responseJson, List.class);
         } catch (JsonProcessingException e) {
             log.error("Failed to parse json!!", e.getMessage());
-            log.info("develop branch 변경사항 적용");
+
         }
 
         return jsonMapList.stream()
