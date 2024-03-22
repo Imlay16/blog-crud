@@ -72,7 +72,8 @@ public class BlogService {
         try {
             jsonMapList = objectMapper.readValue(responseJson, List.class);
         } catch (JsonProcessingException e) {
-            log.error("Failed to parse json", e.getMessage());
+            log.error("Failed to parse json!!", e.getMessage());
+            log.info("변경사항 만들기!!");
         }
 
         return jsonMapList.stream()
